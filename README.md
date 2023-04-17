@@ -2,18 +2,19 @@
 Working with files in JavaScript.
 
 ## Download
+### file_download.js
 
-### Description
+#### Description
 This function provides a way to download blob files from the browser.
 
-### Parameter
+#### Parameter
 - `data` : `Blob` - File blob object
 - `filename` : `string` - Name of the file to download
 
-### Returns
+#### Returns
 - `void`
 
-### Function
+#### Function
 - [file_download.js](./file_download.js)
 
 ```js

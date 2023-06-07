@@ -8,5 +8,5 @@ export function fileDownload(data = new Blob(), filename = '') {
     const link = document.createElement('a');
     link.href = window.URL.createObjectURL(data);
     link.download = filename;
-    link.click()
+    link.click();
 }

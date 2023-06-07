@@ -2,7 +2,6 @@
 Working with files in JavaScript.
 
 ## Download
-
 ### Description
 This function provides a way to download blob files from the browser.
 

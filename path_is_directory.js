@@ -5,7 +5,7 @@
  * './path/to/file.txt' => false
  * './path/to' => true
  * ```
- * @param path The path that should be checked
+ * @param {string} path The path that should be checked
  * @returns {boolean} If the path is a directory
  */
 export function pathIsDirectory(path = '') {

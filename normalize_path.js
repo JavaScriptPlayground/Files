@@ -9,9 +9,9 @@
  * @returns {string} The normalized path
  */
 export function normalizePath(path = '', separator = '/') {
-    const regExMatchSeparatorPosionReplacement = /\/{2,}(?:\.\/+)?|(?<=\/(?:\.\.)+)\.\/|(?<=\/(?:\.\.)+)(?!\/)/g;
-    const regExMatchStartSlash = /^\/+/;
-    const regExMatchParentDirectory = /[^./]+\/\.\.\//g;
+    const regExMatchSeparatorPosionReplacement = /\/{2,}(?:\.[\/\\]+)?|(?<=[\/\\](?:\.\.)+)\.[\/\\]|(?<=[\/\\](?:\.\.)+)(?![\/\\])/g;
+    const regExMatchStartSlash = /^[\/\\]+/;
+    const regExMatchParentDirectory = /[^./\\]+[\/\\]\.\.[\/\\]/g;
     path = path.replace(
         regExMatchSeparatorPosionReplacement,
         separator

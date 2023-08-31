@@ -1,5 +1,5 @@
 /**
- * This function takes a path an a separator and returns the normalized path.
+ * This function takes a path and a separator and returns the normalized path.
  * ```
  * normalizePath('this///////is/a//very/messed//./up//.//long/../path//to///a//..../special/../file///.///');
  * // this/is/a/very/messed/up/path/file/
@@ -9,11 +9,11 @@
  * @returns {string} The normalized path
  */
 export function normalizePath(path = '', separator = '/') {
-    const regExMatchSeparatorPosionReplacement = /\/{2,}(?:\.[\/\\]+)?|(?<=[\/\\](?:\.\.)+)\.[\/\\]|(?<=[\/\\](?:\.\.)+)(?![\/\\])/g;
+    const regExMatchSeparatorPositionReplacement = /\/{2,}(?:\.[\/\\]+)?|(?<=[\/\\](?:\.\.)+)\.[\/\\]|(?<=[\/\\](?:\.\.)+)(?![\/\\])/g;
     const regExMatchStartSlash = /^[\/\\]+/;
     const regExMatchParentDirectory = /[^./\\]+[\/\\]\.\.[\/\\]/g;
     path = path.replace(
-        regExMatchSeparatorPosionReplacement,
+        regExMatchSeparatorPositionReplacement,
         separator
     ).replace(
         regExMatchStartSlash,
